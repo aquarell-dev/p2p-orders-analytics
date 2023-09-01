@@ -1,0 +1,16 @@
+{
+	"bybit": {
+		"order_amount_column": "Fiat Amount",
+		"order_type_column": "Type",
+		"completed_status_caption": "Completed",
+		"status_column": "Status",
+		"order_time_column": "Time"
+	},
+	"huobi": {
+		"order_amount_column": "Total",
+		"order_type_column": "Type",
+		"completed_status_caption": "Complete",
+		"status_column": "Status",
+		"order_time_column": "Time"
+	}
+}

@@ -1,3 +1,4 @@
+import os
 from typing import Dict, List
 import pandas as pd
 
@@ -68,5 +69,5 @@ class OrdersAnalytics:
 
 		print(df)
 
-		df.to_excel('output.xlsx')
+		df.to_excel(os.path.join(os.getcwd(), 'files', 'output.xlsx'))
 		

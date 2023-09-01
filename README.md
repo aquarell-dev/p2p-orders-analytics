@@ -36,6 +36,8 @@
 
 Файлы должны называться `bybit.xlsx` и `huobi.xls` соотвественно
 
+![Файлы](/screenshots/files.png?raw=true)
+
 Запуск скрипта с выводом в консоль
 
 ```bash
@@ -59,3 +61,13 @@ python main.py huobi -o output.xlsx
 ```bash
 python main.py bybit -o output.xlsx
 ```
+
+## На выходе
+
+Если запускали с вывоводом в консоль
+
+![Файлы](/screenshots/console.png?raw=true)
+
+Если запускали с выводом в эксель
+
+![Файлы](/screenshots/excel.png?raw=true)

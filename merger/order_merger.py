@@ -1,18 +1,12 @@
-from datetime import date
 import os
+from datetime import date
+from typing import List
+
 import pandas as pd
 
-from typing import List
 from t.mergeable import Mergeable
 from t.order import Order
-
-
-def _convert_us_datetime_to_date_object(us_datetime: str) -> date:
-    full_date, _ = us_datetime.split(' ')
-
-    year, month, day = list(map(int, full_date.split('-')))
-
-    return date(year, month, day)
+from utils.utils import convert_us_datetime_to_date_object
 
 
 def _get_orders(mergeable: Mergeable) -> List[Order]:
@@ -28,7 +22,7 @@ def _get_orders(mergeable: Mergeable) -> List[Order]:
     for _, row in filtered_df.iterrows():
         order = Order(
             fiat_amount=float(row[mergeable.configuration.order_amount_column]),
-            date_time=_convert_us_datetime_to_date_object(str(row[mergeable.configuration.order_time_column])),
+            date_time=convert_us_datetime_to_date_object(str(row[mergeable.configuration.order_time_column])),
             order_type=str(row[mergeable.configuration.order_type_column]).lower()
         )
 
